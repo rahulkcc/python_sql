@@ -1,39 +1,8 @@
-from database_operations import connect_to_database, create_table, insert_data, modify_data, delete_data, view_data, close_connection
+hello.
+this is my first project.
 
-def main():
+This small project is about connecting mySQL databse to Pycharm (Python).
+so i build a "program" in python to create a file which contains students name, student, id, address, we can add more data by selecting option 1 "insert data" or "modyfy" by selecting option 2, and to "delete" the data option 3 and option 4 is for "view" data and last option 5 is for exiting the program.
 
-    connection = connect_to_database()
-
-    cursor = connection.cursor()
-
-    create_table(cursor)
-
-    while True:
-        print("\nTabs:")
-        print("1. Insert Data")
-        print("2. Modify Data")
-        print("3. Delete Data")
-        print("4. View Data")
-        print("5. Exit")
-
-        choice = input("Enter your choice (1/2/3/4/5): ")
-
-        if choice == "1":
-            insert_data(connection, cursor)
-        elif choice == "2":
-            modify_data(connection, cursor)
-        elif choice == "3":
-            delete_data(connection, cursor)
-        elif choice == "4":
-            view_data(cursor)
-        elif choice == "5":
-            print("Exiting...")
-            break
-        else:
-            print("Invalid choice. Please enter 1, 2, 3, 4, or 5.")
-
-
-    close_connection(connection, cursor)
-
-if __name__ == "__main__":
-    main()
+so i created some tables which are containing data and since pycharm is connected to mySQL the data whould be executed in the sql schema and it will show all the data as a table which is created in python. 
+and all the modification will be updated in mySQL as well.
